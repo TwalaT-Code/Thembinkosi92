@@ -1,0 +1,206 @@
+* {
+    box-sizing: border-box;
+    outline:none;
+}
+html, body {
+  margin:0;
+  padding:0;
+  top:0;
+  font-family: 'Montserrat', sans-serif;
+  background-image: url("../img/yyy.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+img{
+  height: 60%;
+  width: 100%;
+
+}
+h1 {
+  color:rgb(77, 67, 133);
+  padding: 10px;
+  display:inline-block;
+}
+#wrap {
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  position:relative;
+  z-index: 2;
+}
+h2 {
+  display:inline-block;
+  margin:0;
+}
+h3 {
+  text-align:center;
+  margin:0 0 5px 0;
+  color:rgb(77, 67, 133);
+  
+}
+
+#header {
+  height:10%;
+  width:100%;
+  background:rgb(172, 172, 216);
+  position:absolute;
+  margin-top:0;
+  display: table;
+}
+#content {
+  height:70%;
+  width:100%;
+  top:30%;
+  position:absolute;
+  overflow:auto;
+  display:inline-block;
+}
+
+#container {
+  display: block;
+  margin:0 auto;
+  padding:10px;
+  width:50%;
+}
+@media (max-width:1366px) {
+  #container {
+    width:75%;
+  }
+}
+@media (max-width:768px) {
+  #container {
+    width:90%;
+  }
+}
+@media (max-width:480px) {
+  #container {
+    width:100%;
+    padding:0;
+  }
+}
+.card {
+  padding:10px;
+  margin: 1em;
+  background: rgb(172, 172, 216);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16);
+  border: 1px solid rgb(94, 92, 92);
+}
+input {
+  display:block;
+  margin:5px 0px;
+  width:100%;
+}
+
+select {
+  display:block;
+  margin:5px 0px;
+  width:100%;
+}
+select[name=type]{
+  padding: 10px 5px;
+}
+p{
+  text-align: center;
+}
+a.btn,
+input[name=reset]
+{
+  display:inline;
+  width:auto;
+}
+
+input[name=Amount]
+{
+  padding:10px 5px;
+  background-color: #96c4ec;
+}
+input[name=Age]
+{
+  padding:10px 5px;
+  background-color:  #96c4ec;
+}
+select[name=SelType]{
+  padding:10px 5px;
+  background-color: #96c4ec;
+}
+.btn {
+  background: #428bca;
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  padding: 8px 15px;
+  text-decoration: none;
+  text-align: center;
+  min-width: 60px;
+  position: relative;
+  transition: color .1s ease;
+}
+.btn:hover {
+  background: #357ebd;
+  cursor:pointer;
+}
+.btn.btnBig {
+  font-size: 18px;
+  padding: 5px 20px;
+  min-width: 100px;
+  border:none;
+    border-radius: 2%;
+}
+.btnClose {
+  color: #aaa;
+  font-size: 30px;
+  text-decoration: none;
+  position: absolute;
+  right: 5px;
+  top: 0;
+}
+.btnClose:hover {
+  color: #919191;
+}
+
+/******** Modal *********/
+
+.modal:before {
+  content: "";
+  display: none;
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+}
+.modal:target:before {
+  display: block;
+}
+.modal:target .modalDialog {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+  top: 20%;
+}
+.modalDialog {
+  background: rgb(111, 107, 153);
+  margin-left: -200px;
+  position: fixed;
+  left: 50%;
+  top: -100%;
+  z-index: 11;
+  width: 320px;
+  -webkit-transform: translate(0, -500%);
+  -ms-transform: translate(0, -500%);
+  transform: translate(0, -500%);
+  -webkit-transition: -webkit-transform 0.8s ease-out;
+  -moz-transition: -moz-transform 0.8s ease-out;
+  -o-transition: -o-transform 0.8s ease-out;
+  transition: transform 0.8s ease-out;
+}
+.modalBody {
+  padding: 20px;
+}
+
+.modalFooter {
+  padding: 15px 5px;
+  border-top: #eee solid 1px;
+}
